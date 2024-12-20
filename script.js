@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
 
 // Fade-in on scroll using Intersection Observer
 document.addEventListener('DOMContentLoaded', () => {
-    const faders = document.querySelectorAll('.project-card, .contact-form');
+    const faders = document.querySelectorAll('.project-card, .contact-form, .project-detail img');
 
     const appearOptions = {
         threshold: 0.1,
@@ -27,5 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
+    });
+});
+
+// Optional: Handle contact form submission
+document.querySelectorAll('.contact-form').forEach(form => {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Implement form submission logic here (e.g., using Fetch API or a form handling service)
+        alert('Thank you for your message! I will get back to you soon.');
+        form.reset();
     });
 });
