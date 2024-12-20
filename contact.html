@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact - Your Name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">Your Name</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li class="dropdown">
+                    <a href="apps.html">My Developed Apps</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="apps.html">All Apps</a></li>
+                        <li><a href="myfinancetracker.html">MyFinanceTracker</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section container fade-in-on-scroll">
+        <h2>Get in Touch</h2>
+        <p>If you have a project you’d like to discuss or simply want to say hi, feel free to reach out.</p>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
