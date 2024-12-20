@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Your Name - iOS Developer</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio of projects by Matthew Kai Yung Chew">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Matthew Chew</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-brand">Your Name</a>
-            <ul class="nav-links">
-                <li><a href="index.html">About Me</a></li>
-                <li class="dropdown">
-                    <a href="apps.html">My Developed Apps</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="apps.html">All Apps</a></li>
-                        <li><a href="myfinancetracker.html">MyFinanceTracker</a></li>
-                        <!-- Add more apps as needed -->
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
+    <header>
+        <div class="header-logo">
+            <a href="index.html">Matthew Chew</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="services.html">Services & Contact</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="container hero-container">
-            <h1>Freelance iOS Developer</h1>
-            <p>Hi, I’m [Your Name], an iOS developer passionate about creating intuitive, high-quality apps using SwiftUI, UIKit, and Core Data.</p>
-            <a href="contact.html" class="btn btn-primary">Let’s Work Together</a>
-        </div>
+        </nav>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="about-section container fade-in-on-scroll">
-        <h2>About Me</h2>
-        <p>I have a strong background in iOS development, focusing on usability, performance, and clean architecture. Over the years, I’ve built apps that streamline everyday tasks, provide valuable insights, and improve user productivity. I thrive in turning complex requirements into polished, functional mobile solutions.</p>
-        <p>My toolkit includes Swift, SwiftUI, UIKit, Combine, Core Data, and various third-party integrations. I’m constantly exploring new frameworks and best practices to deliver exceptional digital experiences.</p>
-    </section>
+    <main>
+        <h2 class="section-title">My iOS Projects</h2>
+
+        <div class="portfolio-grid">
+            <!-- MyFinanceTracker -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/600x400" alt="MyFinanceTracker Screenshot">
+                <div class="project-card-content">
+                    <h3>MyFinanceTracker</h3>
+                    <p>A personal finance app that helps users track expenses, manage budgets, and visualize spending patterns.</p>
+                    <a href="myfinancetracker.html">View Details</a>
+                </div>
+            </div>
+
+            <!-- AtomicHabits -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/600x400" alt="AtomicHabits Screenshot">
+                <div class="project-card-content">
+                    <h3>AtomicHabits</h3>
+                    <p>A habit-building app designed to help users establish positive routines and track long-term progress.</p>
+                    <a href="atomichabits.html">View Details</a>
+                </div>
+            </div>
+
+            <!-- 10BucksClub -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/600x400" alt="10BucksClub Screenshot">
+                <div class="project-card-content">
+                    <h3>10BucksClub</h3>
+                    <p>A deal-finder app showcasing budget-friendly offers under $10, helping users discover great value options.</p>
+                    <a href="10bucksclub.html">View Details</a>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
-        </div>
+        &copy; 2024 Matthew Kai Yung Chew. All Rights Reserved.
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

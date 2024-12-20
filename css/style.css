@@ -1,0 +1,215 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    background: #f9f9f9;
+}
+
+header, nav, footer {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.header-logo a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #007AFF;
+}
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: #007AFF;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background: #005FCC;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.skills-list, .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills-list span, .services-list li {
+    background: #eee;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.project-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card-content {
+    padding: 1rem;
+}
+
+.project-card-content h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card-content p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.project-card-content a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007AFF;
+    text-decoration: none;
+}
+
+.project-card-content a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.project-detail img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.project-features, .project-tech {
+    margin: 1rem 0;
+}
+
+.project-features li, .project-tech li {
+    margin-bottom: 0.5rem;
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: #007AFF;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #005FCC;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
