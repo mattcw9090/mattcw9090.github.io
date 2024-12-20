@@ -1,110 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>iOS Developer Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio of Freelance iOS Developer Matthew Kai Yung Chew">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Kai Yung Chew - Freelance iOS Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="nav-brand">Your Name</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#apps">My Developed Apps</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-logo">
+            <a href="index.html">Matthew Chew</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services & Contact</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="container hero-container">
-            <h1>Freelance iOS Developer</h1>
-            <p>Building intuitive, performant, and reliable iOS applications that help individuals and businesses thrive.</p>
-            <a href="#contact" class="btn btn-primary">Let’s Work Together</a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="about-section container fade-in-on-scroll">
-        <h2>About Me</h2>
-        <p>I am a dedicated iOS developer with a passion for creating sleek, user-friendly mobile solutions. With experience in SwiftUI, UIKit, and Core Data, I specialize in building apps that provide meaningful value, streamline workflows, and delight end-users. Whether you need a financial tracking tool or a custom mobile solution, I bring a strong commitment to quality and innovation.</p>
-    </section>
-
-    <!-- My Developed Apps Section -->
-    <section id="apps" class="apps-section container fade-in-on-scroll">
-        <h2>My Developed Apps</h2>
-        <p>Below are some of the iOS apps I’ve developed. Each project highlights my approach to design, architecture, and functionality. I am constantly exploring new technologies and patterns to enhance the end-user experience.</p>
+        </nav>
+    </header>    
+    
+    <!-- MAIN CONTENT -->
+    <main>
         
-        <!-- Example App: MyFinanceTracker -->
-        <div class="app-showcase">
-            <h3>MyFinanceTracker</h3>
-            <p><strong>MyFinanceTracker</strong> is an iOS application built with SwiftUI and Core Data. It’s ideal for individuals and small business owners who want a simple, intuitive tool to manage net income, monitor cash flow, and plan budgets efficiently.</p>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Matthew Kai Yung Chew</h1>
+            <h2>Freelance iOS Developer</h2>
+            <p>Hey there! I’m Matthew—a freelance iOS developer who’s all about crafting apps that feel natural and intuitive for users.</p>
+            <a class="btn-primary" href="portfolio.html">View My Work</a>
+        </section>
+        <!-- END HERO SECTION -->
 
-            <!-- Features Section for MyFinanceTracker -->
-            <div class="features-section fade-in-on-scroll">
-                <h4>Key Functionalities</h4>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h5>Net Income Tracking</h5>
-                        <p>Instantly view, update, and adjust net income with every new expense or income entry.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h5>Comprehensive Cash Flow</h5>
-                        <p>Manage incoming and outgoing payments effortlessly, ensuring you know your financial standing at all times.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h5>Recurring & Quick Add</h5>
-                        <p>Predefine frequent transactions or use the “quick add” feature to simplify repetitive data entry.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h5>Seamless Data Persistence</h5>
-                        <p>Utilize Core Data for secure and accessible local data storage, even when offline.</p>
-                    </div>
-                </div>
+        <!-- ABOUT ME SECTION -->
+        <section class="about-me">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-me-content">
+                <img 
+                    src="./images/about_me_profile.jpg" 
+                    alt="Matthew Chew" 
+                    class="profile-picture"
+                >
+                <div class="about-me-text">
+                    <p>
+                        Based in <strong>Perth, Western Australia</strong>, my journey into iOS development started during my university years 
+                        when I was tasked with a group project to design a mobile app. I vividly remember spending hours experimenting 
+                        with code, pushing the limits of what I could create, and eventually realizing how much I enjoyed bringing ideas 
+                        to life through technology. That experience ignited my passion for app development and inspired me to dive deeper 
+                        into the Apple developer ecosystem.
+                    </p>
+                    <p>
+                        Over the years, I’ve had the privilege of working with a variety of clients, from small startups to established 
+                        businesses, helping them bring their ideas to life on the Apple App Store. I’m committed to writing clean, 
+                        maintainable code and staying ahead in the ever-evolving tech world through continuous learning and innovation.
+                    </p>
+                    <p>
+                        When I’m not immersed in code, you’ll find me playing badminton or working on videography projects. These hobbies 
+                        help me unwind and keep a balanced approach to life.
+                    </p>
+                </div>                                                             
             </div>
+        </section>
+        <!-- END ABOUT ME SECTION -->
 
-            <!-- Demo Section for MyFinanceTracker -->
-            <div class="demos-section fade-in-on-scroll">
-                <h4>Demos & Screenshots</h4>
-                <p>Explore the look and feel of MyFinanceTracker. Check out the video demo and preview screenshots:</p>
-                <p><strong>Video Demo:</strong> <a href="https://example.com/myfinancetracker-demo" target="_blank">Watch Here</a></p>
-                <p><strong>Screenshots:</strong></p>
-                <div class="screenshots">
-                    <div class="screenshot-placeholder">Add Your Screenshot Here</div>
-                    <div class="screenshot-placeholder">Add Your Screenshot Here</div>
-                </div>
+        <!-- SKILLS & EXPERTISE -->
+        <section>
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-list">
+                <span><i class="fab fa-swift"></i> Swift</span>
+                <span><i class="fab fa-swift"></i> SwiftUI</span>
+                <span><i class="fas fa-database"></i> Core Data</span>
+                <span><i class="fas fa-project-diagram"></i> MVVM Architecture</span>
+                <span><i class="fas fa-paint-brush"></i> UX Design</span>
             </div>
-        </div>
+        </section>        
 
-        <!-- Additional apps can be added here in a similar format as MyFinanceTracker -->
-    </section>
+        <!-- CALL TO ACTION SECTION -->
+        <section class="call-to-action">
+            <h2 class="section-title">Let’s Build Something Great Together</h2>
+            <p>If you’re looking for a dedicated iOS developer who values collaboration, creativity, and crafting seamless user experiences, I’d love to hear from you! Whether you’re a startup, an established business, or just someone with a great idea, I’m here to help bring your vision to life.</p>
+            <a class="btn-secondary" href="services.html">Get in Touch</a>
+        </section>
+        <!-- END CALL TO ACTION SECTION -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section container fade-in-on-scroll">
-        <h2>Let’s Discuss Your Project</h2>
-        <p>If you’re looking for a freelance iOS developer to turn your ideas into reality, I’d love to hear from you. Let’s connect and discuss how I can assist with your project.</p>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
-            <button type="submit" class="btn btn-primary">Contact Me</button>
-        </form>
-    </section>
+    </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        &copy; 2024 Matthew Kai Yung Chew. All Rights Reserved.
+        <div class="social-icons">
+            <a href="https://github.com/mattcw9090" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/matthew-chew-kai-yung" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/your-twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/mattycky/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/mattcw9090" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
         </div>
-    </footer>
+    </footer>    
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
