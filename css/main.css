@@ -107,11 +107,37 @@ body {
     line-height: 1.6;
 }
 
-/* Features Section */
-.features-section h2 {
-    text-align: center;
+/* Apps Section */
+.apps-section h2 {
     font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.apps-section p {
+    text-align: center;
     margin-bottom: 40px;
+}
+
+.app-showcase {
+    margin-bottom: 60px;
+}
+
+.app-showcase h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.app-showcase p {
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Features Section (within Apps) */
+.features-section h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
 }
 
 .features-grid {
@@ -133,14 +159,15 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.feature-card h3 {
+.feature-card h5 {
     margin-top: 0;
     margin-bottom: 15px;
+    font-size: 1.1rem;
 }
 
-/* Demos Section */
-.demos-section h2 {
-    font-size: 2rem;
+/* Demos Section (within Apps) */
+.demos-section h4 {
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
