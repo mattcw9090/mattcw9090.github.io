@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Optional: Handle contact form submission
+// Handle contact form submission
 document.querySelectorAll('.contact-form').forEach(form => {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -38,4 +38,29 @@ document.querySelectorAll('.contact-form').forEach(form => {
         alert('Thank you for your message! I will get back to you soon.');
         form.reset();
     });
+});
+
+// Theme toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+}
+
+themeToggle.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
 });
