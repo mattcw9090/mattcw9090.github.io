@@ -1,14 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #333;
     background: #f9f9f9;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* A subtle gradient background */
+    background: linear-gradient(to bottom, #ffffff 0%, #f3f7fb 100%);
 }
 
 header, nav, footer {
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header {
@@ -22,7 +39,7 @@ header {
     text-decoration: none;
     color: #333;
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 nav ul {
@@ -37,10 +54,23 @@ nav a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    position: relative;
 }
 
 nav a:hover {
     color: #007AFF;
+}
+
+/* Highlight active link */
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #007AFF;
+    border-radius: 2px;
 }
 
 main {
@@ -52,6 +82,8 @@ main {
 .hero {
     text-align: center;
     margin: 3rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero h1 {
@@ -59,11 +91,19 @@ main {
     margin-bottom: 1rem;
 }
 
+.hero h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
 .hero p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
     margin-bottom: 2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
 }
 
 .btn-primary {
@@ -75,10 +115,12 @@ main {
     font-weight: bold;
     display: inline-block;
     margin-top: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary:hover {
     background: #005FCC;
+    transform: translateY(-2px);
 }
 
 .section-title {
@@ -92,30 +134,33 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .skills-list span, .services-list li {
     background: #eee;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .project-card {
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
     border: 1px solid #eee;
-}
-
-.project-card:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
 }
 
 .project-card img {
@@ -137,17 +182,18 @@ main {
 .project-card-content p {
     font-size: 0.95rem;
     color: #555;
+    margin-bottom: 1rem;
 }
 
 .project-card-content a {
-    display: inline-block;
-    margin-top: 1rem;
     color: #007AFF;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .project-card-content a:hover {
-    text-decoration: underline;
+    color: #005FCC;
 }
 
 .footer {
@@ -155,6 +201,7 @@ main {
     padding: 1.5rem 0;
     font-size: 0.9rem;
     color: #555;
+    margin-top: 2rem;
 }
 
 .project-detail img {
@@ -164,7 +211,7 @@ main {
 }
 
 .project-features, .project-tech {
-    margin: 1rem 0;
+    margin: 1rem 0 2rem;
 }
 
 .project-features li, .project-tech li {
@@ -175,13 +222,16 @@ main {
 
 .contact-form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .contact-form label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .contact-form input, .contact-form textarea {
@@ -200,10 +250,19 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .contact-form button:hover {
     background: #005FCC;
+    transform: translateY(-2px);
+}
+
+/* Fade-in class for scroll animation */
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 /* Responsive */
@@ -211,5 +270,9 @@ main {
     nav ul {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
     }
 }
