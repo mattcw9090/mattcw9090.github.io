@@ -71,7 +71,6 @@
    }
    a:hover {
        color: var(--primary-color-dark);
-       text-decoration: underline;
    }
    
    /* --------------------------------------------------------------
