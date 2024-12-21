@@ -416,7 +416,7 @@
    
    /* --------------------------------------------------------------
       MEDIA QUERIES
-      (You mentioned desktop-only, but leaving a small example for reference)
+      (I plan to design desktop-only, but leaving a small example for reference)
       -------------------------------------------------------------- */
    @media (max-width: 600px) {
        .hero h1 {
