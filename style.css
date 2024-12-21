@@ -1,48 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-:root {
-    /* Light Theme Colors */
-    --primary-color: #007AFF;
-    --secondary-color: #333333;
-    --accent-color: #FF9500;
-    --background-color: #f3f7fb;
-    --card-background: #ffffff;
-    --text-color: #333333;
-    --muted-text: #555555;
-    --border-color: #eee;
-    --footer-background: #ffffff;
-    --header-background: #ffffff;
-
-    /* Dark Theme Colors */
-    --dark-primary-color: #0A84FF;
-    --dark-secondary-color: #f3f7fb;
-    --dark-accent-color: #FF9F0A;
-    --dark-background-color: #1c1c1e;
-    --dark-card-background: #2c2c2e;
-    --dark-text-color: #f3f7fb;
-    --dark-muted-text: #a1a1a6;
-    --dark-border-color: #3a3a3c;
-    --dark-footer-background: #2c2c2e;
-    --dark-header-background: #2c2c2e;
-
-    /* Transition */
-    --transition-speed: 0.3s;
-}
-
-[data-theme="dark"] {
-    --primary-color: var(--dark-primary-color);
-    --secondary-color: var(--dark-secondary-color);
-    --accent-color: var(--dark-accent-color);
-    --background-color: var(--dark-background-color);
-    --card-background: var(--dark-card-background);
-    --text-color: var(--dark-text-color);
-    --muted-text: var(--dark-muted-text);
-    --border-color: var(--dark-border-color);
-    --footer-background: var(--dark-footer-background);
-    --header-background: var(--dark-header-background);
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -356,18 +314,6 @@ main {
 .fade-in {
     opacity: 1 !important;
     transform: translateY(0) !important;
-}
-
-/* Dark mode toggle button */
-.theme-toggle {
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-    transition: color var(--transition-speed);
-}
-
-[data-theme="dark"] .theme-toggle {
-    color: var(--background-color);
 }
 
 /* Social media icons in footer */
