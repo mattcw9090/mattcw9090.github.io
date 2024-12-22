@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
 
 // Fade-in on scroll using Intersection Observer
 document.addEventListener('DOMContentLoaded', () => {
-    const faders = document.querySelectorAll('.project-card, .contact-form, .project-detail img');
+    const faders = document.querySelectorAll('.project-card, .contact-form, .project-detail img, .profile-picture');
 
     const appearOptions = {
         threshold: 0.1,
