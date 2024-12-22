@@ -18,10 +18,10 @@
    
    body {
        /* Subtle radial gradient background for a more upscale feel */
-       background: radial-gradient(circle at top, #f4f4f4 0%, #e9ecef 100%);
+       background: radial-gradient(circle at top, #ffffff 0%, #f4f6f9 100%); /* Enhanced from #f4f4f4 to #ffffff */
        font-family: 'Open Sans', sans-serif;
        color: #2b2b2b;
-       line-height: 1.6;
+       line-height: 1.8; /* Increased from 1.6 for better readability */
        font-size: 16px;
        -webkit-font-smoothing: antialiased;
    }
@@ -56,11 +56,39 @@
        text-decoration: none;
        font-weight: 600;
        transition: background-color 0.3s ease, transform 0.3s ease;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added for 3D effect */
    }
    
    .btn-primary:hover {
        background-color: var(--primary-color-dark);
        transform: translateY(-2px);
+   }
+   
+   .btn-primary:active {
+       transform: translateY(1px);
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn-secondary {
+       display: inline-block;
+       background-color: #ffffff;
+       color: var(--primary-color);
+       padding: 0.75rem 1.5rem;
+       border-radius: 4px;
+       font-weight: 600;
+       text-decoration: none;
+       transition: background-color 0.3s ease, transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added for 3D effect */
+   }
+   
+   .btn-secondary:hover {
+       background-color: #e9ecef;
+       transform: translateY(-2px);
+   }
+   
+   .btn-secondary:active {
+       transform: translateY(1px);
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
    }
    
    /* Links */
@@ -69,6 +97,7 @@
        text-decoration: none;
        transition: color 0.3s ease;
    }
+   
    a:hover {
        color: var(--primary-color-dark);
    }
@@ -83,7 +112,8 @@
        left: 0;
        z-index: 999;
        padding: 1rem 2rem;
-       background-color: #ffffff;
+       background-color: rgba(255, 255, 255, 0.9); /* Made translucent */
+       backdrop-filter: blur(5px); /* Added for header translucency */
        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
        transition: box-shadow 0.3s ease;
    }
@@ -131,17 +161,20 @@
        color: #2b2b2b;
        text-decoration: none;
        position: relative;
-       transition: color 0.3s ease;
+       transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+       cursor: pointer; /* Ensures the cursor changes on hover */
    }
    
    nav a:hover {
-       color: var(--primary-color);
+       color: var(--primary-color-dark);
+       transform: scale(1.05); /* Added slight scale on hover */
    }
    
    nav a.active {
        color: var(--primary-color);
        font-weight: 700;
    }
+   
    nav a.active::after {
        content: "";
        position: absolute;
@@ -150,6 +183,22 @@
        width: 100%;
        height: 2px;
        background-color: var(--primary-color);
+   }
+   
+   /* Optional: Underline animation for nav links */
+   nav a::after {
+       content: "";
+       position: absolute;
+       left: 0;
+       bottom: -2px;
+       width: 0%;
+       height: 2px;
+       background-color: var(--primary-color);
+       transition: width 0.3s ease;
+   }
+   
+   nav a:hover::after {
+       width: 100%;
    }
    
    /* --------------------------------------------------------------
@@ -176,6 +225,20 @@
        border-radius: 8px;
        margin-bottom: 3rem;
        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+       position: relative;
+   }
+   
+   .hero::after {
+       content: "";
+       position: absolute;
+       bottom: -50px; /* Adjust overlap as needed */
+       left: 0;
+       width: 100%;
+       height: 50px;
+       background: #ffffff; /* Matches main background */
+       transform: skewY(2deg);
+       transform-origin: 0;
+       z-index: -1;
    }
    
    .hero h1 {
@@ -205,44 +268,76 @@
        text-align: center;
        color: #2b2b2b;
        font-family: 'Montserrat', sans-serif;
+       position: relative;
+       display: inline-block; /* Allows pseudo-element positioning */
+       cursor: default;
    }
-
+   
+   .section-title:hover::after {
+       content: "";
+       position: absolute;
+       bottom: -4px;
+       left: 0;
+       width: 100%;
+       height: 3px;
+       background-color: var(--primary-color);
+   }
+   
+   /* More breathing room */
+   section {
+       padding: 4rem 2rem; /* Increased from 3rem */
+   }
+   
    /* About Me Section on Index Page */
-    .about-me {
-        margin: 3rem auto;
-        max-width: 900px;
-    }
-
-    .about-me-content {
-        display: flex;
-        gap: 2rem;
-        align-items: flex-start;
-        /* optional: add a subtle background or box shadow */
-        background-color: #fff;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .profile-picture {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-        image-rendering: auto;
-        border-radius: 50%;
-        border: 3px solid #e5e5e5;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .about-me-text {
-        flex: 1;
-    }
-
-    .about-me-text p {
-        line-height: 1.7;
-        margin-bottom: 1.2rem;
-        color: #555;
-    }
+   .about-me {
+       margin: 3rem auto;
+       max-width: 900px;
+   }
+   
+   .about-me-content {
+       display: flex;
+       gap: 2rem;
+       align-items: flex-start;
+       /* Subtle background and box shadow */
+       background-color: #ffffff;
+       padding: 3rem; /* Increased padding */
+       border-radius: 8px;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   }
+   
+   .profile-picture {
+       width: 250px;
+       height: 250px;
+       object-fit: cover;
+       image-rendering: auto;
+       border-radius: 50%;
+       border: 3px solid #e5e5e5;
+       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+       animation: fadeInImage 0.8s ease forwards; /* Added fade-in animation */
+       opacity: 0; /* Start hidden */
+   }
+   
+   .about-me-text {
+       flex: 1;
+   }
+   
+   .about-me-text p {
+       line-height: 1.7;
+       margin-bottom: 1.2rem;
+       color: #555;
+   }
+   
+   /* Fade-in animation for profile picture */
+   @keyframes fadeInImage {
+       from {
+           opacity: 0;
+           transform: scale(0.95);
+       }
+       to {
+           opacity: 1;
+           transform: scale(1);
+       }
+   }
    
    /* Skills list on index page */
    .skills-list {
@@ -252,8 +347,9 @@
        gap: 1.5rem;
        margin-top: 2rem;
    }
+   
    .skills-list span {
-       background-color: #fff;
+       background-color: #ffffff;
        border: 1px solid #eee;
        padding: 0.75rem 1rem;
        border-radius: 4px;
@@ -264,54 +360,46 @@
        transition: transform 0.3s ease, box-shadow 0.3s ease;
        cursor: default;
    }
+   
    .skills-list span:hover {
        transform: translateY(-3px);
        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
    }
-
+   
    /* Call to Action section on index page */
-    .call-to-action {
-        background-color: var(--primary-color);
-        color: #ffffff;
-        text-align: center;
-        padding: 3rem 2rem;
-        border-radius: 8px;
-        margin: 3rem 0;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .call-to-action h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom: 1.5rem;
-    }
-
-    .call-to-action p {
-        font-size: 1rem;
-        line-height: 1.7;
-        margin-bottom: 2rem;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .call-to-action .btn-secondary {
-        display: inline-block;
-        background-color: #ffffff;
-        color: var(--primary-color);
-        padding: 0.75rem 1.5rem;
-        border-radius: 4px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .call-to-action .btn-secondary:hover {
-        background-color: #e9ecef;
-        transform: translateY(-2px);
-    }
+   .call-to-action {
+       background-color: var(--primary-color);
+       color: #ffffff;
+       text-align: center;
+       padding: 3rem 2rem;
+       border-radius: 8px;
+       margin: 3rem 0;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   }
+   
+   .call-to-action h2 {
+       font-size: 2rem;
+       font-weight: 700;
+       font-family: 'Montserrat', sans-serif;
+       margin-bottom: 1.5rem;
+   }
+   
+   .call-to-action p {
+       font-size: 1rem;
+       line-height: 1.7;
+       margin-bottom: 2rem;
+       max-width: 700px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   
+   .call-to-action .btn-secondary {
+       /* Already defined above with additional styles */
+   }
+   
+   .call-to-action .btn-secondary:hover {
+       /* Already defined above */
+   }
    
    /* --------------------------------------------------------------
       PORTFOLIO GRID
@@ -404,6 +492,7 @@
        margin-top: 2rem;
        padding-left: 0;
    }
+   
    .services-list li {
        display: flex;
        align-items: center;
@@ -411,6 +500,7 @@
        font-weight: 500;
        color: #555;
    }
+   
    .services-list li i {
        color: var(--primary-color);
        margin-right: 0.5rem;
@@ -426,6 +516,8 @@
        padding: 2rem;
        border-radius: 6px;
        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+       opacity: 0; /* Ensures it matches the fade-in utility */
+       transform: translateY(40px); /* Ensures it matches the fade-in utility */
    }
    
    .contact-form label {
@@ -464,11 +556,17 @@
        transform: translateY(-2px);
    }
    
+   .contact-form button[type="submit"]:active {
+       transform: translateY(1px);
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   }
+   
    /* --------------------------------------------------------------
       FOOTER
       -------------------------------------------------------------- */
    .footer {
-       background-color: #ffffff;
+       background-color: #2b2b2b; /* Changed from #ffffff to darker background */
+       color: #ffffff;
        text-align: center;
        padding: 2rem 1rem;
        margin-top: 3rem;
@@ -482,7 +580,7 @@
    }
    
    .footer .social-icons a {
-       color: #2b2b2b;
+       color: #ffffff; /* Changed from #2b2b2b to #ffffff */
        margin: 0 0.5rem;
        font-size: 1.2rem;
        display: inline-block;
@@ -490,13 +588,13 @@
    }
    
    .footer .social-icons a:hover {
-       color: var(--primary-color);
+       color: var(--accent-color);
        transform: translateY(-2px);
    }
    
    /* --------------------------------------------------------------
       MEDIA QUERIES
-      (I plan to design desktop-only, but leaving a small example for reference)
+      (Designed primarily for desktop, with some responsiveness)
       -------------------------------------------------------------- */
    @media (max-width: 600px) {
        .hero h1 {
@@ -507,6 +605,37 @@
        }
        .portfolio-grid {
            grid-template-columns: 1fr;
+       }
+       
+       /* Adjust header padding for smaller screens */
+       header {
+           padding: 0.8rem 1.5rem;
+       }
+   
+       /* Stack navigation items vertically on small screens */
+       nav ul {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+   
+       nav ul li {
+           margin-left: 0;
+           margin-bottom: 1rem;
+       }
+   
+       .about-me-content {
+           flex-direction: column;
+           align-items: center;
+       }
+   
+       .profile-picture {
+           width: 200px;
+           height: 200px;
+       }
+   
+       .call-to-action p {
+           padding: 0 1rem;
        }
    }
    
