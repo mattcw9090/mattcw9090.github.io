@@ -218,7 +218,7 @@
    /* Hero Section */
    .hero {
        text-align: center;
-       padding: 6rem 2rem;
+       padding: 3rem 2rem;
        background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
        color: #ffffff;
        border-radius: 8px;
