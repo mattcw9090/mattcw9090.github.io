@@ -27,65 +27,37 @@
         <h2 class="section-title">MyFinanceTracker</h2>
         
         <p>
-            <strong>MyFinanceTracker</strong> is an iOS app built entirely with <strong>SwiftUI</strong>, 
-            leveraging <strong>Core Data</strong> for data persistence and <strong>iCloud</strong> for seamless syncing.
-            The app helps users manage their finances by tracking transactions, net income, and outstanding debts or credits.
-            It follows an <strong>MVVM</strong> architecture, making the code cleaner, more organized, and easier to maintain.
+            <strong>MyFinanceTracker</strong> is a user-friendly app designed to help individuals manage their finances efficiently. 
+            It allows users to track daily transactions, calculate their net income, and monitor outstanding debts or credits with ease.
         </p>
 
-        <img src="images/MyFinanceTrackerIcon.png" alt="MyFinanceTracker Screenshot">
+        <img src="images/MyFinanceTrackerIcon.png" alt="MyFinanceTracker Screenshot" style="max-width: 100%; height: auto;">
 
         <h3>Key Features</h3>
         <ul class="project-features">
-            <li><strong>Real-Time Expense Tracking:</strong> Stay updated on day-to-day expenses and incomes.  
-                (<em>See <code>NetIncomeTabView</code> and <code>AddTransactionView</code></em>)
-            </li>
-            <li><strong>Budget Management & Alerts:</strong> Keep an eye on your net income and get alerted if things go off track.</li>
-            <li><strong>Data Visualization with Charts & Graphs:</strong> Planned for future iterations to make expenses more intuitive.</li>
-            <li><strong>Secure Storage with Core Data & iCloud Sync:</strong> All financial data is stored locally
-                using <em>NSPersistentContainer</em> while also syncing with iCloud. 
-                (<em>See <code>PersistenceController</code></em>)
-            </li>
-        </ul>
-
-        <h3>Technical Highlights</h3>
-        <ul class="project-tech">
-            <li><strong>SwiftUI & MVVM Architecture:</strong> Modern UI with separated state management for maintainable code.</li>
-            <li><strong>Core Data Integration:</strong> Persistent storage for transactions and custom entities like 
-                <em>CashFlowItem</em>, <em>PredefinedTransaction</em>, and <em>QuickAddTransaction</em>.
-            </li>
-            <li><strong>EnvironmentObjects & Publishers:</strong> <em>NetIncomeManager</em> is an <code>ObservableObject</code> 
-                that publishes changes to net income across the app, enabling real-time updates. 
-                (<em>See <code>NetIncomeManager.swift</code></em>)
-            </li>
-            <li><strong>Tabbed Navigation & Modals:</strong> Multi-tab layout for net income, cash flow, and settings, 
-                each with custom modals for adding or editing data. 
-                (<em>See <code>ContentView.swift</code> and its child views</em>)
-            </li>
-        </ul>
+            <li><i class="fas fa-dollar-sign"></i><strong>Expense Tracking:</strong> Keep an eye on daily expenses and incomes to stay on top of your financial health.</li>
+            <li><i class="fas fa-chart-line"></i><strong>Budget Monitoring:</strong> Helps users manage their budget effectively and avoid overspending.</li>
+            <li><i class="fas fa-user-check"></i><strong>Simple Interface:</strong> Designed to be intuitive and easy to navigate for anyone, regardless of technical expertise.</li>
+        </ul>        
 
         <h3>How It Works</h3>
         <p>
-            The entry point, <code>MyFinanceTrackerApp</code>, initializes a shared <code>PersistenceController</code> 
-            and a <code>NetIncomeManager</code>. Once inside the app, you’ll find three main tabs in <code>ContentView.swift</code>:
+            Users can record their transactions, including income and expenses, and view summaries that help them understand their financial position. 
+            The app is straightforward, without requiring user accounts or complex setups, making it perfect for personal finance tracking.
         </p>
-        <ul>
-            <li><strong>Net Income Tab</strong> (via <code>NetIncomeTabView</code>) – Displays net income, allows adding or 
-                editing transactions by day, and automatically adjusts net income through <code>NetIncomeManager</code>.
-            </li>
-            <li><strong>Cash Flow Tab</strong> (via <code>CashFlowTabView</code>) – Lists what you owe and who owes you. 
-                Tapping a cash flow item opens up an <code>EditCashFlowItemView</code> for modifications.
-            </li>
-            <li><strong>Settings Tab</strong> (via <code>SettingsTabView</code>) – Houses predefined transactions and 
-                quick-add transactions, making it easy to initialize or quickly log frequent expenses/income. 
-            </li>
-        </ul>
 
+        <h3>App Store Access</h3>
         <p>
-            Every time you add, edit, or delete a transaction, <code>NetIncomeManager</code> updates the net income accordingly
-            (see <code>adjustNetIncome</code> method). The data model is defined in <strong>MyFinanceTracker.xcdatamodeld</strong>, 
-            where you’ll find entities for storing <em>Transactions</em>, <em>CashFlowItems</em>, and more.
+            Scan the QR code below to access the app directly on the App Store:
         </p>
+        <img src="images/QRCodePlaceholder.png" alt="App Store QR Code" style="width: 200px; height: 200px;">
+
+        <h3>App Preview</h3>
+        <div class="app-gallery">
+            <img src="images/screenshot1.png" alt="App Screenshot 1" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+            <img src="images/screenshot2.png" alt="App Screenshot 2" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+            <img src="images/screenshot3.png" alt="App Screenshot 3" style="max-width: 100%; height: auto;">
+        </div>
 
         <p><a class="btn-primary" href="portfolio.html">Back to Portfolio</a></p>
     </main>
